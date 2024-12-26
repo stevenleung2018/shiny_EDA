@@ -61,7 +61,7 @@ server <- function(input, output) {
     })
     
     output$hist_faithful <- renderCachedPlot({
-        Sys.sleep(2)
+        # Sys.sleep(2)
         faithful |> ggplot(aes(x=waiting)) + 
             geom_histogram(bins = input$n) + 
             ggtitle(paste0(
